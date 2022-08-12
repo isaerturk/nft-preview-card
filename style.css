@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+.colors {
+  color: hsl(215, 51%, 70%);
+  color: hsl(178, 100%, 50%);
+  color: hsl(217, 54%, 11%);
+  color: hsl(216, 50%, 16%);
+  color: hsl(215, 32%, 27%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+.card {
+  width: 20em;
+  border-radius: 10px;
+  height: 34em;
+  margin: 150px auto;
+  background-color: hsl(216, 50%, 16%);
+}
+.card-main {
+  padding: 1em;
+}
+.card-img{
+    position: relative;
+}
+.card-img img {
+  width: 18em;
+  border-radius: 10px;
+}
+.card-img::before{
+    content: url("data:image/svg+xml,%3Csvg width='48' height='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h48v48H0z'/%3E%3Cpath d='M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, .5);
+    transform: scale(0);
+    transition: all .2s ease;
+}
+.card-img:hover::before{
+    transform: scale(1);
+    cursor: pointer;
+}
+.card-header a h3 {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 0;
+}
+.card-header a h3:hover,
+.card-profile a:hover {
+  color: hsl(178, 100%, 50%);
+}
+.card-desc {
+  color: hsl(215, 51%, 70%);
+  padding-bottom: 14px;
+  font-size: 18px;
+  font-weight: 100;
+}
+.card-amount {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-amount svg {
+  padding-top: 2px;
+}
+#amount {
+  color: hsl(178, 100%, 50%);
+}
+#time {
+  color: hsl(215, 51%, 70%);
+}
+.card-line {
+  width: 100%;
+  background-color: hsl(215, 51%, 70%);
+  opacity: 0.2;
+  height: 1px;
+}
+
+.card-profile {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  color: hsl(215, 51%, 70%);
+  display: flex;
+  align-items: center;
+}
+.card-profile img {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.card-profile a {
+  color: hsl(0, 0%, 100%);
+  opacity: 0.7;
+}
